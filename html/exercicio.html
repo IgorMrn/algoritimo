@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Digita qualquer cosisa</h3>
+    <input type="text" id="valor">
+    <span><button onclick="sim()">seu texto</button></span>
+    <span ><button onclick="nao()">apagar</button></span>
+    <div style="background-color: purple;"><span id="span_text" style="color: white;"></span></div>
+    
+    
+</body>
+</html>
+<script>
+function sim(){
+
+    alert(valor.value)
+span_text.innerHTML += "<div>"+(valor.value)+"</div>"
+
+
+
+}
+
+function nao(){
+span_text.innerHTML = ''
+
+
+
+}
+
+
+
+
+
+</script>
+
+
+<!-- id_input.value -->
+
+<!-- ipt_nome.value pra apagar -->
+
+<!-- para adicionar mais uma função no mesmo input é so adicionar um +(concatenar) -->

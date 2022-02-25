@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Seu dados</h3>
+    Cidade natal <br>
+   <input type="text" name="Cidade natal" id="valor">
+   <br>
+   Ano de nascimento <br>
+   <input type="text2" name="ano de nascimento" id="valor2">
+
+    <br><br><button onclick="ok()">Cadastrar</button>
+    <button onclick="ok2()"></button>
+
+    <button onclick="apagar()">apagar</button>
+
+   <span id="spantext"></span>
+    <br><br>
+
+
+</i>
+</body>
+</html>
+<script>
+function ok(){
+alert(valor.value + valor2.value)
+spantext.innerHTML += "<br>"+('Cidade natal:'+ ' ' +valor.value +' ' + '<br>'+'Data de Nascimento:'+' '+valor2.value)  
+
+
+
+}
+
+function apagar(){
+spantext.innerHTML = ''
+
+
+}
+
+
+
+
+
+</script>
+
+<!-- ` interpolação ou seja não precisa usar o sinal de + -->
