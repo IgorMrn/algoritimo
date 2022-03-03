@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Exercicio 1</title>
+</head>
+    <body style="font-family:roboto, sans serif;">
+
+    <h2> Tag input</h2>
+         Digite com o sua cidade natal:       
+         <br>  <br>
+         <input id="ipt_natal" style="border-radius: 3px;">
+        
+         <br> <br>
+        
+         Digite a sua data de nascimento:       
+         <br>  <br>
+         <input id="ipt_ano" style="border-radius: 3px;" placeholder="">
+         <br> <br>
+         <button onclick="Cadastrar ()" style="border-radius: 2px;">Cadastrar </button>
+
+    </body>
+</html>
+
+<script>
+    function Cadastrar(){
+        alert ('Sua cidade natal é: ' + ipt_natal.value + '  ' +' sua data de nascimento é :' + ipt_ano.value);
+        ipt_natal.value = '';
+        ipt_ano.value = '';
+    }
+</script>
