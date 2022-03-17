@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ 
+    
+    <h3>frequencia</h3>
+    <br><input type="text" name="aluno" id="alu" placeholder="Coloque seu nome">
+    <br>
+    <br><input type="text" name="totais" id="tota" placeholder="Total de aulas">
+    <br>
+    <br><input type="text" name="fal" id="faltou" placeholder="Total de faltas">
+   <br> <br> <button onclick="ok()">Calcular Frequência</button>
+    <span id="aluu"></span>
+</body>
+</html>
+<script>
+function ok(){
+    var aulas = Number(tota.value);
+    var faltas = Number(faltou.value);
+var tot_faltas = aulas / faltas * 100
+var freq = 100 - faltas / aulas * 100
+var final = aulas - faltas
+var final2 =  Number(final / aulas * 100)
+
+aluu.innerHTML = `<br><span style="color: blue;">Olá,${alu.value}Sua frequência foi de </span>  <span style="color: green;">${final2.toFixed(2)}% </span>` 
+
+
+
+}
+
+
+
+
+
+
+
+</script>
