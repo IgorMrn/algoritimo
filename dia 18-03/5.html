@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>tabuada</h3>
+
+</body>
+
+</html>
+<select name="opa" id="nao" onchange="valor()">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+
+</select>
+<span id="spanText"></span>
+<script>
+    function valor() {
+        var numero = Number(nao.value)
+        spanText.innerHTML = `<br>1 x ${numero} = ${numero * 1}<br>2 x ${numero} = ${numero * 2}<br>3 x ${numero} = ${numero * 3}<br>4 x ${numero} = ${numero * 4}<br>5 x ${numero} = ${numero * 5}<br>6 x ${numero} = ${numero * 6}<br>7 x ${numero} = ${numero * 7}<br>8 x ${numero} = ${numero * 8}<br>9 x ${numero} = ${numero * 9}<br>10 x ${numero} = ${numero * 10}`
+
+
+
+
+
+
+
+
+    }
+</script>
