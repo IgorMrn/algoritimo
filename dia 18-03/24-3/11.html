@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cofrinho</h2>
+    <select id="moedas">
+        <option value="0.05">5 centavos</option>
+        <option value="0.1">10 centavos</option>
+        <option value="0.25">25 centavos</option>
+        <option value="0.5">50 centavos</option>
+        <option value="1">1 real</option>
+</select>
+<br>
+<button onclick="ok()">Depositar</button>
+<button onclick="gastar()">Gastar tudo</button>
+<br><br>
+Saldo do cofrinho é de R$ <b id="b_saldo">0</b> <br>
+Quantidade de operações <b id="b_opera">0</b> <br>
+Média dos depositos : <b id="b_depo">0</b> 
+</body>
+</html>
+<script>
+var depositos = 0
+var valor = 0
+
+function ok(){
+depositos ++
+valor = valor + Number(moedas.value)
+b_saldo.innerHTML = valor
+b_opera.innerHTML = Number(depositos)
+b_depo.innerHTML = (valor/depositos).toFixed(2)
+
+
+}
+
+function gastar(){
+depositos = 0
+valor = 0
+b_saldo.innerHTML = 0
+b_opera.innerHTML = 0 
+b_depo.innerHTML = 0
+
+
+
+
+}
+
+
+
+
+
+</script>
