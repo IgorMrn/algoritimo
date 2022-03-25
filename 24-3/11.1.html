@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Saldo</h2>
+    <input type="text" name="sal" id="saldo">
+    <button onclick="ok()">Verificar finanças</button>
+    <span id="span"></span>
+    
+</body>
+</html>
+<script>
+    
+function ok(){
+    var valor = saldo.value
+if(saldo.value ==0)
+span.innerHTML = `R$${valor} Conta zerada`
+
+if (saldo.value <0) {
+    span.innerHTML = `<span style="color: red;">R$${valor} Está devendo!</span>`
+}
+if (saldo.value >0) {
+    span.innerHTML = `<span style="color: blue;">R$${valor} Saldo positivo! :)</span>`
+}
+
+}
+
+</script>
