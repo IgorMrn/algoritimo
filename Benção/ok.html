@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="combo">
+        <option value="0">--Selecionar—</option>
+        <option value="1">SP–Capital</option>
+        <option value="2">SP–Interior</option>
+        <option value="3">Outros Estados</option>
+
+
+
+
+    </select>
+
+    <button onclick="ok()">Falar do Local</button>
+    <span id="spanText"></span>
+
+
+</body>
+
+</html>
+<script>
+    function ok() {
+        var selecionarr = combo.value;
+        if (selecionarr == 0) {
+            alert(`Favor escolher uma opção`)
+            spanText.innerHTML = ''
+        }
+        if (selecionarr == 1) {
+            spanText.innerHTML = `<br><img src="Cidade-de-São-Paulo.jpg" alt="" style="height: 200px;"><br>Os nascidos nesta cidade são Paulistanos`
+        } else
+            if (selecionarr == 2) {
+                spanText.innerHTML = `<br><img src="download.jfif" alt="" style="height: 200px;"><br>Os nascidos neste estado são Paulistas`
+
+            }
+        if (selecionarr == 3) {
+            spanText.innerHTML = `<br>Os nascidos neste lugar não são Paulistanos e nem Paulistas`
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+</script>
