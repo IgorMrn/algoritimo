@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Temperatura</h2>
+    <input type="text" id="tempe" placeholder="digite a temperatura">
+    <button onclick="ok()">Calcular</button>
+    <span id="spanText"></span>
+</body>
+</html>
+<script>
+function ok(){
+    var congelante = Number(tempe.value)
+    var comfrio = Number(tempe.value)
+    var confortavel = Number(tempe.value)
+    var comcalor = Number(tempe.value)
+    var calor = Number(tempe.value)
+    if(congelante < 14){
+spanText.innerHTML = `<br>Congelante`
+    }else{
+if(comfrio <=21 ){
+spanText.innerHTML = `<br>Com frio`
+}else{
+if(confortavel <= 24){
+spanText.innerHTML = `<br>Confortável`
+
+}else{
+if(comcalor <= 31){
+spanText.innerHTML = `<br>Com calor`
+
+}else{
+if(calor >31)
+spanText.innerHTML = `<br>Calor escaldante` 
+
+}
+
+
+}
+
+}
+
+    }
+
+}
+
+
+
+
+
+
+</script>

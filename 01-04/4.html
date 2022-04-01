@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>avaliar o peso de crianças </h2>
+    <button onclick="ok()">Calcular</button>
+    <input type="text" id="peso">
+    <span id="spanText"></span>
+</body>
+</html>
+<script>
+function ok(){
+var abaixo = Number(peso.value).toFixed(2);
+var acima = Number(peso.value).toFixed(2);
+var media = Number(peso.value).toFixed(2);
+var perfeito = Number(peso.value).toFixed(2);
+
+if(abaixo <= 13.5){
+spanText.innerHTML = `<br>Abaixo do peso` 
+
+
+
+
+}else{
+if(acima >21.2){
+    spanText.innerHTML = `<br>Acima do peso `
+}
+if(media == 21.2){
+    spanText.innerHTML = `<br>Peso na média` 
+
+}else{
+    if(perfeito == 18.3){
+        spanText.innerHTML = `<br> Peso perfeito` 
+
+
+    }
+}
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+</script>

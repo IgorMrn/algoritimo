@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>banco SPTO</h2>
+    <input type="text" id="nome">
+    <input type="text" id="saldo">
+    <button onclick="ok()">Verificar Conta</button>
+    <span id="spanText"></span>
+</body>
+</html>
+<script>
+function ok(){
+var valor = Number(saldo.value).toFixed(2);
+var cliente = nome.value
+
+if(valor <0 ){
+    spanText.innerHTML = `<br>Com o saldo de ${valor} o cliente ${cliente} está com saldo devedor`
+
+
+}else{
+    if(valor == 2000){
+        spanText.innerHTML = `<br>Com o saldo de ${valor} o cliente ${cliente} está com saldo NORMAL`
+
+    }else{
+    if(valor == 2000,01){
+        spanText.innerHTML = `<br>Com o saldo de ${valor} o cliente ${cliente} está com saldo ACIMA DO NORMAL`
+    }
+        if(valor == 5000){
+        spanText.innerHTML = `<br>Com o saldo de ${valor} o cliente ${cliente } está com saldo ACIMA DO NORMAL`
+
+    }
+        if(valor > 5000){
+            spanText.innerHTML = `<br>Com o saldo de ${valor} o cliente ${cliente} TEM PERFIL DE INVESTIDOR`
+
+        }
+    
+}
+   
+}
+}
+
+
+
+
+</script>
