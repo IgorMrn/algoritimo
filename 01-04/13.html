@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><h2 id="guar">guardado</h2>
+    <button onclick="ok()">Guardar R$5,00</button>
+    <button onclick="ok2()">Gastar R$10,00</button>
+    <span id="spanText"></span>
+    <div style="color: blue;">Finanças OK!</div>
+</body>
+</html>
+<script>
+    var valores = 0
+    
+    function ok(){
+
+        valores +5
+        if(valores >= 0 ){
+            spanText.innerHTML = `<div style="color: blue;">Finanças OK!</div>`
+
+        }
+
+    }
+
+
+
+
+
+
+
+</script>

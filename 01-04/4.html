@@ -7,51 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>avaliar o peso de crianças </h2>
-    <button onclick="ok()">Calcular</button>
-    <input type="text" id="peso">
-    <span id="spanText"></span>
+    <h2>Avaliar o peso de crianças </h2>
+    <h4>Digite o peso da criança</h4>
+    <!-- <button onclick="fcPeso()">Calcular</button> -->
+    <input type="text" id="ipt_Peso" onkeyup="fcPeso()" placeholder="Digite peso da Criança">
+    <div id="spanText"></div>
+
+    
+<script>
+    function fcPeso(){
+    // var abaixo = Number(peso.value).toFixed(2);
+    // var acima = Number(peso.value).toFixed(2);
+    // var media = Number(peso.value).toFixed(2);
+    // var perfeito = Number(peso.value).toFixed(2);
+    var peso = Number(ipt_Peso.value);
+    
+    if(peso == 18.3){
+    spanText.innerHTML = `<br>Peso Perfeito` 
+
+    }else if(peso >= 0 && peso <= 13.5){
+        spanText.innerHTML = `<br>Abaixo do peso`
+
+    }else if( peso > 13.5 && peso <= 21.2){
+        spanText.innerHTML = `<br>Peso na média` 
+
+    }else if(peso > 21.2){
+        spanText.innerHTML = `<br> Acima do peso` 
+
+        }   
+    }
+    
+    </script>
 </body>
 </html>
-<script>
-function ok(){
-var abaixo = Number(peso.value).toFixed(2);
-var acima = Number(peso.value).toFixed(2);
-var media = Number(peso.value).toFixed(2);
-var perfeito = Number(peso.value).toFixed(2);
 
-if(abaixo <= 13.5){
-spanText.innerHTML = `<br>Abaixo do peso` 
-
-
-
-
-}else{
-if(acima >21.2){
-    spanText.innerHTML = `<br>Acima do peso `
-}
-if(media == 21.2){
-    spanText.innerHTML = `<br>Peso na média` 
-
-}else{
-    if(perfeito == 18.3){
-        spanText.innerHTML = `<br> Peso perfeito` 
-
-
-    }
-}
-
-
-
-    }
-}
-
-
-
-
-
-
-
-
-
-</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>economia</h2>
+    <input type="text" name="" id="eco">
+    <button onclick="ok()">Poder de compra</button>
+    <span id="spanText"></span>
+</body>
+</html>
+<script>
+function ok(){
+var economico = Number(eco.value)
+if(economico <= 0){
+spanText.innerHTML = `Nada de compras :(`
+}else if(economico == 100){
+    spanText.innerHTML = `Viajem de ida e volta pra Praia Grande`
+}else if(economico > 100 && economico < 4000){
+    spanText.innerHTML = `Uma boa moto usada`
+}else if(economico == 4000){
+    spanText.innerHTML = `Mais alguma bobagem legal`
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
