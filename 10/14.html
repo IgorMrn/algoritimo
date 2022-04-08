@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="passagem">
+        <option value="1">Comum</option>
+        <option value="2">Estudante</option>
+        <option value="3">Idoso/PNE</option>
+
+
+
+
+
+
+
+
+    </select>
+<select name="" id="tipo">
+<option value="4">Passagem única</option>
+<option value="5">Passagem integração</option>
+
+
+
+
+
+
+</select>
+
+<button onclick="ok()">Simular preço</button>
+<span id="spanText"></span>
+</body>
+
+</html>
+
+<script>
+var unica = 4.4;
+var inte = 5.90;
+
+
+function ok(){
+var normal = Number(passagem.value == 1 )* unica.toFixed(2);
+var estudante = Number(passagem.value == 2)*unica * 0.5.toFixed(2);
+var idoso = Number(passagem.value == 3);
+var gratuito = 0;
+var estudante_inte = Number(passagem.value == 2 )* inte * 0.5;
+var normal_int = Number(passagem.value == 1)* inte
+
+if(normal){
+spanText.innerHTML = `Valor da passagem escolhida: R$ ${normal}`
+
+}else if(estudante){
+spanText.innerHTML = `Valor da passagem escolhida: R$ ${estudante}`
+
+}else if(idoso){
+    spanText.innerHTML = `Valor da passagem escolhida: R$ ${gratuito}`
+
+
+}
+if (estudante_inte){
+spanText.innerHTML = `Valor da passagem escolhida: R$ ${estudante_inte}`
+}else if(normal_int){
+    spanText.innerHTML = `Valor da passagem escolhida: R$ ${normal_int}`
+
+}
+}
+
+
+
+
+
+    
+</script>

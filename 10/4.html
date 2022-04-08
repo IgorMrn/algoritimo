@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <select name="" id="combo">
+        <option value="1">Dinheiro</option>
+        <option value="2">Cartão de débito</option>
+        <option value="3">Cartão de crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+    <button onclick="ok()">Analisar compra</button>
+    <span id="spanText"></span>
+
+    </body>
+    </html>
+    <script>
+        function ok(){
+            var selecionar = combo.value
+            if(selecionar == 1 || selecionar == 2){
+            spanText.innerHTML =`<br>Você terá que pagar a vista`
+            }else if(selecionar == 3 || selecionar == 4){
+                spanText.innerHTML = `<br>Pagamento poderá ser parcelado`
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+    </script>
