@@ -7,23 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Temperatura</h2>
-    <input type="text" id="tempe">
-    <button onclick="ok()">Ver situação</button>
-    <span id="spanText"></span>
+<input type="text" name="" id="nome" onkeydown="verificar()">
+<span id="spanText"></span>
 </body>
 </html>
 <script>
-function ok(){
-var temperatura = Number(tempe.value)
-
-if(temperatura == 21 && 24){
-alert(`Temperatura confortável :)`)
+function verificar() {
+    if(nome.value.trimStart() && nome.value.trimStart() ){
+        spanText.innerHTML = `Nome ok`
+    
+    // spanText.innerHTML = `${(nome.value).length}`
+    // spanText.innerHTML += `${nome.value.trimStart().length}`
+     
 }else{
-    alert(`Temperatura DESCONFORTÁVEL :(`)
+    spanText.innerHTML = `Nome deve se informado!`
+}
 }
 
-}
+
+
 
 
 
