@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="morango" placeholder="quantidade de morangos">
+    <input type="text" name="" id="caixas" style="display: none;" placeholder="valor de venda de cada caixa de morango">
+    <span style="display: block;" id="botao2"><button onclick="ok()">Abrir as Vendas</button></span>
+    <span style="display: none;" id="botao"><button onclick="registrar()">Registrar a Venda</button></span>
+    <span id="spantext"></span>
+    <input type="text" name="" id="quantia" style="display: none;"
+        placeholder="valor de venda de cada caixa de morango">
+    <span style="display: none;" id="encerrar"><button onclick="encerrarr()">Encerrar o dia</button></span>
+    <span id="spantext"></span>
+
+
+</body>
+
+</html>
+<script>
+
+    function ok() {
+        var quantidade = Number(morango.value)
+        // var caixa = Number(caixas.value)
+
+
+
+        if (quantidade < 100) {
+            alert('ERRO - Com esse volume de Morangos não dá para abrir as vendas')
+        } else if (quantidade > 2000) {
+            alert('AVISO – Tudo isso!!! Verificar se a quantidade está correta')
+            caixas.style.display = 'block'
+            botao.style.display = 'block'
+            botao2.style.display = 'none'
+            morango.style.display = 'none'
+            quantia.style.display = 'block'
+            encerrar.style.display = 'block'
+
+        } else {
+            caixas.style.display = 'block'
+            botao.style.display = 'block'
+            botao2.style.display = 'none'
+            morango.style.display = 'none'
+            quantia.style.display = 'block'
+            encerrar.style.display = 'block'
+
+        }
+        if (quantidade == 100 && quantidade == 2000) {
+            spantext.innerHTML = ''
+
+        }
+
+
+
+
+
+
+
+
+    }
+    var quantidade 
+        var caixa 
+    function registrar() {
+        quantidade = Number(caixas.value)
+        caixa = Number(quantia.value)
+        // var vinte = Number(caixa * 5 && caixa * 6)
+        var quarenta = Number(caixa * 4.5 & caixa * 5.5)
+        // var acima = Number(caixa * 4 && caixa * 5)
+
+        if (quantidade < 20 && caixa == 5 || caixa == 6) {
+            spantext.innerHTML = `<br>Com a venda de ${quantidade} de caixas de Morango o saldo no restante é de ${quantidade - caixa} ` //  5 e 6
+        } else {
+            spantext.innerHTML = `Valor errado para essa quantidade vendida`
+
+            if (quantidade == 20 && quantidade == 40 && caixa == 4.5 && caixa == 5.5) {
+                spantext.innerHTML = `<br> Com a venda de ${quantidade} de caixas de Morango o saldo no restante é de ${quantidade - caixa}`
+            } else {
+                spantext.innerHTML = `Valor errado para essa quantidade vendida`
+            }
+
+            if (quantidade > 40 && caixa == 4 && caixa == 5) {
+                spantext.innerHTML = `<br>Com a venda de ${quantidade} de caixas de Morango o saldo no restante é de ${quantidade - caixa}`
+
+
+            } else {
+                spantext.innerHTML = `Valor errado para essa quantidade vendida`
+            }
+        }
+
+
+    }
+
+    function encerrarr() {
+
+        spantext.innerHTML = `   Saldo de produto = ${quantidade - caixa}
+
+Volume total vendido = ${quantidade}
+
+Valor total das vendas = R$ ${quantidade - caixa}
+
+Valor médio das vendas = R$ ${quantidade / caixa}
+`
+
+
+
+
+    }
+</script>
