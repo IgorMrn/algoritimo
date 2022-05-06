@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span><input type="text" name="" id="numero"></span>
+    <button onclick="ok()">Contar</button>
+    <span id="spantext"></span>
+    <div id="tela"></div>
+</body>
+</html>
+<script>
+function ok(){
+if(numero.value >= 100){
+
+    spantext.innerHTML =`99 é o limite!! mude o numero`
+    tela.innerHTML = ``
+}else
+
+for (var limite = 5 ;limite <= numero.value ;limite ++) {
+    tela.innerHTML += `<br>${limite}`
+    spantext.innerHTML = ``
+     
+
+
+}
+
+
+}
+
+
+
+
+
+</script>
